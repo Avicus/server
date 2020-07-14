@@ -1,0 +1,81 @@
+# Path to the directory containing the localization files.
+locales-path: "CHANGE-ME"
+
+# Maximum player imbalance across groups before players are not allowed to force join
+max-group-imbalance: 0.20
+
+# Map libraries
+libraries:
+  # Path to where the maps are located
+- path: "CHANGE-ME"
+  # Directories inside the maps folder where maps should not be loaded from
+  ignored-directories:
+    - "Test"
+    - "Dev"
+
+# Github authentication configuration
+github:
+  # If authentication is required to access github map libraries
+  auth: false
+  # GitHub username
+  username: username
+  # GitHub auth token - https://github.com/settings/tokens
+  token: your token
+
+# Rotation configuration
+rotation:
+  # Location of the rotation file
+  path: plugins/Atlas/rotation.xml
+  # If the server should automatically restart at the end of the rotation
+  restart-on-end: true
+  # If the order of the maps defined in the rotation should be shuffled
+  randomize: true
+  # If the match should automatically start when enough players are on teams
+  auto-start: true
+
+# If Atlas should delete match worlds on server close
+delete-matches: true
+
+# If the server is being used for scrimmages
+#  - group imbalances ignored
+#  - objective distance counts toward who wins and is displayed
+#  - anyone can pick teams
+scrimmage: false
+
+# Website display information
+website:
+  # Base URL of all website links
+  base: http://avicus.net
+  # {0} = map slug
+  map: maps/map/{0}/
+
+# If map developers should recieve warnings for using deprecated XML elements
+send-deprecation-warnings: false
+
+# Freeze configuration
+freeze:
+  # If freeze is enabled
+  enabled: true
+  radius:
+    # Radius around frozen players to remove fire
+    extinguish: 15
+    # Radius around frozen players to remove primed tnt
+    tnt: 15
+
+# Chat configuration
+chat:
+  # Remove color codes from chat sent by users
+  strip-color: true
+
+# Channels configuration
+channels:
+  # If chat channels are enabled
+  enabled: true
+  reports:
+    # If people can use /report
+    enabled: true
+    # The time, in seconds, a player must wait between reports.
+    cooldown: 15
+  staff:
+    # If the staff channels are enabled
+    enabled: true
